@@ -33,7 +33,7 @@ app.post('/webhook', async (req, res) => {
 app.listen(8080, () => console.log(`Listening on port ${8080}!`));
 ```
 
-The sample code above (see also `index.js`) will spin up a server that will run on port 8080 on your localhost (When you go to production, you will have to use a different domain). 
+The sample code above (see also [index.js](https://github.com/jhnferraris/webhook-sample/blob/master/index.js)) will spin up a server that will run on port 8080 on your localhost (When you go to production, you will have to use a different domain). 
 You can either do a curl command or use a curl client application (e.g. POSTMAN) for the sake of testing.
 
 
