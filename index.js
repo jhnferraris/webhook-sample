@@ -6,9 +6,9 @@ app.use(bodyParser.json())
 
 app.post('/webhook', async (req, res) => {
   // TODO: You will have to implement the logic of this method.
-  processWebhookNotificationData(req.body);
+  // processWebhookNotificationData(req.body);
   res.send({
-    success: true,
+    processWebhookData: 'success',
   })
 });
 
