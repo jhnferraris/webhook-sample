@@ -13,8 +13,29 @@ This is a sample of a webhook that can be used on any system (e.g. gateways) tha
 
 ### Calling the webhook
 
-The server will run on port 8080 on your localhost (When you go to production, you will have to use a different domain). 
+The code:
+
+```
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.json())
+
+app.post('/webhook', async (req, res) => {
+  // TODO: You will have to implement the logic of this method.
+  // processWebhookNotificationData(req.body);
+  res.send({
+    processWebhookData: 'success',
+  })
+});
+
+app.listen(8080, () => console.log(`Listening on port ${8080}!`));
+```
+
+The sample code above (see also `index.js`) will spin up a server that will run on port 8080 on your localhost (When you go to production, you will have to use a different domain). 
 You can either do a curl command or use a curl client application (e.g. POSTMAN) for the sake of testing.
+
 
 Screenshot of Postman
 <img width="1025" alt="Screen Shot 2022-05-19 at 8 43 35 AM" src="https://user-images.githubusercontent.com/3207153/169178624-7d3398ea-4d10-4a47-a9e3-0fdaf4965844.png">
