@@ -5,15 +5,15 @@ const app = express();
 app.use(bodyParser.json())
 
 app.post('/webhook', async (req, res) => {
-  // TODO: You will have to implement the logic of this method.
-  console.log(req.url);
   processWebhookNotificationData(req.body);
   res.send({
-    processWebhookData: 'success',
+    webhookDataProcessed: 'success',
   })
 });
 
 const processWebhookNotificationData = (data) => {
+  // TODO: You will have to implement the logic of this method.
+  // i.e. DB updates, fulfillment flow, etc.
   console.log(`Processing data`);
   console.log(data);
   console.log(`Done`)
